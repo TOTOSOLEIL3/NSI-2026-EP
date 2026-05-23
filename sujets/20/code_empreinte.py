@@ -49,41 +49,11 @@ utilisateur6 = {}
 # Écrire le code de la fonction calculer_empreinte de la question 1         #
 #############################################################################
 
-def calculer_empreinte(utilisateur):
-    empreinte = 0 
-    for activite in EMISSIONS:
-        quantite1 = 0
-        if activite in utilisateur:
-            quantite1 = utilisateur[activite]
-        empreinte += quantite1 * EMISSIONS[activite]
-
-    return empreinte
-
-print(calculer_empreinte(utilisateur1))
-            
-
-        
-
-
 
 #############################################################################
 # Écrire le code de la fonction classer_par_impact de la question 2         #
 #############################################################################
 
-def classer_par_impact(utilisateur):
-    impact = {"fort" : [],
-              "moyen" : [],
-              "faible" : []}
-    for activite in utilisateur:
-        calc = utilisateur[activite] * EMISSIONS[activite]
-        if calc >= 1000:
-            impact['fort'].append(activite)
-        elif calc >= 200:
-            impact['moyen'].append(activite)
-        else:
-            impact['faible'].append(activite)
-    return impact
-print(classer_par_impact(utilisateur2))
 
 #############################################################################
 # Fonction fournie pour la question 3                                       #
@@ -113,9 +83,8 @@ def test_comparer():
     diff = comparer(utilisateur4, utilisateur5)
     assert diff['emails_simples'] == -200  # (50-100) * 4
     assert diff['recherches'] == 350     # (100-50) * 7
-    assert diff['streaming_hd'] == 0
-    diff = comparer(utilisateur1, utilisateur2)
-    assert diff['']
+    # Ajouter vos tests ci-dessous avec justifications
+
 
 #############################################################################
 # Fonction fournie pour la question 4                                       #

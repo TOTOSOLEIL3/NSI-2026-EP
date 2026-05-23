@@ -4,8 +4,6 @@ from donnees_habitats import zones_connues
 nouveau = {'vegetation': 5, 'proximite_eau': 2,
            'densite_urbaine': 4, 'disponibilite_proies': 6}
 
-nouveau1 = {'vegetation': 4, 'proximite_eau': 8,
-           'densite_urbaine': 8, 'disponibilite_proies': 4}
 
 def distance(habitat_1, habitat_2):
     '''
@@ -16,9 +14,8 @@ def distance(habitat_1, habitat_2):
     sortie : 
         - float : distance euclidienne entre habitat_1 et habitat_2.
     '''
-    return sqrt((habitat_1["vegetation"] - habitat_2["vegetation"])**2 + (habitat_1["proximite_eau"] - habitat_2["proximite_eau"])**2 + (habitat_1["densite_urbaine"] - habitat_2["densite_urbaine"])**2 + (habitat_1["disponibilite_proies"]-habitat_2["disponibilite_proies"])**2)
+    pass  # à remplacer par votre code
 
-print(distance(nouveau,nouveau1))
 
 def distance_d_un_habitat(habitat, habitats):
     '''

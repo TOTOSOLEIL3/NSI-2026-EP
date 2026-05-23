@@ -10,37 +10,17 @@ from mesures import mesures
 
 
 def croissance_moyenne(plantes):
-    if len(plantes) == 0:
-        return None
-    else:
-        total = 0 
-        for plante in plantes:
-            total += plante.croissance
-        return total/len(plantes)
+    pass
 
-plantes = [
-    Plante("Basilic", "Ocimum basilicum", 60, 40, "plein soleil"),
-    Plante("Tomate", "Solanum lycopersicum", 80, 100, "plein soleil"),
-    Plante("Menthe", "Mentha spicata", 80, 50, "mi-ombre"),
-    Plante("Tournesol", "Helianthus annuus", 85, 200, "plein soleil"),
-    Plante("Fougère", "Dryopteris filix-mas", 90, 80, "ombre")
-]
-
-
-print(croissance_moyenne(plantes))
 
 #############################################################################
 # Écrire le code de la fonction dictionnaire_mesure de la question 2      #
 #############################################################################
 
 def dictionnaire_mesure(plantes, mesures):
-    d = {}
-    for plante in plantes:
-        d[plante.nom] = []
-    for plantes in mesures:
-        d[plante.nom] = plantes.mesures
+    pass
 
-print(dictionnaire_mesure(plantes, mesures))
+
 #############################################################################
 # Fonction défaillante à analyser et corriger pour les questions 3 et 4     #
 #############################################################################

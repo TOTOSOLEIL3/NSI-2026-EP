@@ -8,17 +8,11 @@ class Renard:
     """
 
     def __init__(self, identifiant, nom, poids, date_arrivee):
-        self.identifiant = identifiant
-        self.nom = nom
-        self.poids = poids
-        self.date_arrivee = date_arrivee
+        pass  # Question 1 à compléter
 
     def __str__(self):
-        return f"Renard ID {self.identifiant} - {self.nom} (Arrivé le {self.date_arrivee})"
+        pass  # Question 2 à compléter
 
-renard1 = Renard(200,"Oscar",5.1,"2026-01-1")
-
-print(renard1)
 
 class Refuge:
     """
@@ -58,19 +52,6 @@ class Refuge:
         with open(nom_fichier, 'r', encoding='utf-8') as f:
             lignes = csv.DictReader(f, delimiter=';')
             for ligne in lignes:
-                renard = Renard(int(ligne['id']), ligne['nom'],
-                                float(ligne['poids']), ligne['date_arrivee'])
+                renard = Renard(ligne['id'], ligne['nom'],
+                                ligne['poids'], ligne['date_arrivee'])
                 self.recueillir(renard)
-                
-
-
-
-refuge = Refuge("SOS Goupil", "12 rue de la Forêt")
-refuge.importer_donnees("donnees_renards.csv")
-
-peu = refuge.lister_peu_corpulents()       # stocke la liste
-pourcentage = refuge.pourcentage_peu_corpulents()   # stocke le %
-
-print(f"Peu corpulents : {len(peu)}")
-print(f"Total : {len(refuge.liste_renards)}")
-print(f"Pourcentage : {pourcentage} %")
